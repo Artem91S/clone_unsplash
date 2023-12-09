@@ -1,0 +1,23 @@
+.section {
+    height: 300px;
+    padding: 8px 16px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    &__title {
+        color:#FFF;
+        padding: 20px 0px;
+        font-size: 37px;
+        letter-spacing: 3px;
+    }
+    &__button {
+        cursor: pointer;
+        padding: 10px;
+        font-size: 18px;
+        width: 200px;
+    }
+    &__button_title {
+        font-size: 20px;
+        font-weight: 800;
+    }
+}

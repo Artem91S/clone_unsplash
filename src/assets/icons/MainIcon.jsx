@@ -3,7 +3,7 @@ import React from "react";
 function MainIcon() {
   return (
     <svg
-      class="UP8CN"
+      // class="UP8CN"
       width="32"
       height="32"
       viewBox="0 0 32 32"

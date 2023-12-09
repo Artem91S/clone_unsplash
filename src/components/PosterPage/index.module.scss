@@ -1,0 +1,64 @@
+.poster__container {
+    display: flex;
+    flex-flow: column;
+    padding: 0px 20px;
+}
+.container {
+    &__description{
+        padding: 10px 0;
+    }
+   &__categories{
+    display: grid;
+    gap:20px;
+    grid-template-columns:repeat(3,1fr) ;
+   }
+  
+}
+.description {
+    &__title {
+        text-transform: uppercase;
+    }
+    &__text {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+    &__icons{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.icons{
+&__container{
+    padding: 6px;
+    border:1px solid #eee;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+&__heart_icon {
+    color:red;
+    font-size: 22px;
+}
+&__heart_text {
+    color:#111;
+}
+&__download_icon{
+    color:green;
+    font-size: 22px;
+}
+}
+
+.categories{
+    &__item{
+   
+        font-weight: 600;
+        padding: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        width: 80%;
+        background: #eee;
+       }
+}
