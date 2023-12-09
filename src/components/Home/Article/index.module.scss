@@ -1,0 +1,14 @@
+.section {
+    height: 30vh;
+    padding: 8px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    &__title {
+        padding: 20px 0px;
+        font-size: 35px;
+    }
+    &__button {
+        width: 200px;
+    }
+}

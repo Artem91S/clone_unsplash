@@ -2,6 +2,12 @@ import React, { useEffect } from "react";
 import { useGetData } from "../../../hooks/useGetData,";
 import MasonryContainer from "../../ui/MasonryContainer/MasonryContainer";
 import { useInView } from "react-intersection-observer";
+import style from './index.module.scss'
+import { FaHeart } from "react-icons/fa6";
+import { FaPlus } from "react-icons/fa6";
+import { HiMiniChevronDown } from "react-icons/hi2";
+
+
 
 function MainLayout() {
   const { ref, inView } = useInView();
@@ -47,6 +53,11 @@ function MainLayout() {
         }}
       >
         {allItems?.map((photo) => (
+          <div className={style.poster__container}>
+            <div className={style.container__user_information}>
+              <img src={photo.urls?.thumb} alt={photo.user.name} style={{width:"28px", height:"28px", borderRadius:'50%'}} />
+              <p>{photo.user.name}</p>
+            </div>
           <a key={photo.id} ref={ref} to={`/${photo.id}`}>
             <img
               src={photo.urls.small}
@@ -54,7 +65,21 @@ function MainLayout() {
               style={{ width: "100%", height: "100%" }}
             />
           </a>
-          // </div>
+          <div className={style.container__buttons}>
+            <div className={style.buttons__icons}>
+              <div className={style.icons__container}><FaHeart/></div>
+              <div className={style.icons__container}><FaPlus/></div>
+            </div>
+            <div className={style.buttons__download}>
+              <div className={style.download__text}>
+               Download
+              </div>
+              <div className={style.download__icon}>
+              <HiMiniChevronDown/>
+              </div>
+            </div>
+          </div>
+         </div>
         ))}
       </MasonryContainer>
     </div>

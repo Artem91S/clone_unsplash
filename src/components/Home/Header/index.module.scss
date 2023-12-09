@@ -1,0 +1,49 @@
+.header {
+  position: relative;
+  top: 0;
+
+  background: #FFF;
+  &__navbar {
+    height: 56px;
+    padding: 8px;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.navbar {
+  &__links {
+    display: none;
+  }
+  &__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+.icons {
+  &__bell {
+    cursor: pointer;
+    display: none;
+  }
+  &__user {
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    color: rgb(200 198 198);
+  }
+  &__menu {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    color: rgb(117, 117, 117);
+    &:hover {
+        color: rgb(164, 161, 161); 
+    }
+    
+  }
+}

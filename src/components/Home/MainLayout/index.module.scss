@@ -1,0 +1,74 @@
+.poster__container {
+    display: flex;
+    flex-flow: column;
+    gap:10px;
+}
+
+.container {
+    &__user_information {
+        display: flex;
+        gap:10px;
+        align-items: center;
+    }
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+}
+
+.buttons {
+    &__icons {
+        display: flex;
+        gap:12px;
+    }
+    &__download{
+        color:#767676;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
+.icons {
+    &__container {
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:#767676;
+        border:1px solid #d1d1d1;
+        &:hover {
+            color:#111;  
+            border-color: #111; 
+        }
+    }
+}
+
+.download{
+&__text{
+    padding: 8px;
+    border:1px solid #d1d1d1;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-right: none;
+    &:hover {
+        color:#111;  
+        border-color: #111; 
+        border-right: 1px solid #111 ;
+    }
+}
+&__icon{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 7.5px;
+    border:1px solid #d1d1d1;
+    &:hover {
+        color:#111;  
+        border-color: #111; 
+    }
+}
+}
