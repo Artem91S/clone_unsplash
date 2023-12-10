@@ -15,7 +15,6 @@ function PosterPage() {
       }),
     [data]
   );
-  console.log(allItems);
 
   if (status === "loading") {
     return <span>Loading...</span>;
@@ -26,7 +25,9 @@ function PosterPage() {
   }
   return (
     <div className={style.poster__container}>
-      <img src={allItems?.urls.regular} alt={allItems?.alt_description} />
+      <div className={style.container__image}>
+      <img src={allItems?.urls.regular} alt={allItems?.alt_description}  />
+      </div>
       <div className={style.container__description}>
         <h3 className={style.description__title}>{allItems?.alt_description}</h3>
         <p className={style.description__text}>{allItems?.description}</p>

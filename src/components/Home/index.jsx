@@ -1,8 +1,7 @@
-import { useInView } from "react-intersection-observer";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 import Article from "../ui/Article/Article";
 import { useGetData } from "../../hooks/useGetData,";
-import { useMemo,useEffect } from "react";
+import { useMemo } from "react";
 import ListOfPhoto from './ListOfPhoto'
 
 function Home({ title }) {
@@ -17,12 +16,11 @@ function Home({ title }) {
       }),
     [data]
   );
-  // console.log(allItems?[0].urls.small);
   
   return (
     <>
-      <Article title={title} photo={allItems && allItems[0].urls?.regular} />
-      <ListOfPhoto  />
+      <Article title={title} photo={allItems && allItems[7].urls?.regular} />
+      <ListOfPhoto getFunction={useGetData} results={true}/>
     </>
   );
 }

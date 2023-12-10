@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useState,useContext } from "react";
 import style from "./index.module.scss";
 import { IoSearch } from "react-icons/io5";
+import { Quantity } from "../../../../router";
+import { useNavigate } from "react-router-dom";
 
 function SearchField() {
   const [value, setValue] = useState("");
+  const [showSearch]=useContext(Quantity)
+  const navigate=useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    // console.log(showSearch);
     console.log(value);
+    navigate('./search')
   };
 
   return (

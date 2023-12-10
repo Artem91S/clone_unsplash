@@ -5,13 +5,13 @@ import { FaHeart } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa6";
 import { HiMiniChevronDown } from "react-icons/hi2";
 import { useInView } from "react-intersection-observer";
-import { useGetData } from "../../../hooks/useGetData,";
 import { Link } from "react-router-dom";
+import {useGetDataCategoria } from '../../../hooks/useGetDataCategoria'
+import {useGetData } from '../../../hooks/useGetData,'
 
-
-function ListOfPhoto() {
+function ListOfPhoto({results,query}) {
   const { ref, inView } = useInView();
-  const { data, error, fetchNextPage, hasNextPage, status } = useGetData();
+  const { data, error, fetchNextPage, hasNextPage, status } =results ? useGetData():useGetDataCategoria(query) ;
 
   useEffect(() => {
     if (inView && hasNextPage) {
@@ -20,10 +20,22 @@ function ListOfPhoto() {
   }, [inView, hasNextPage, fetchNextPage]);
 
   const allItems = useMemo(
-    () =>
-      data?.pages.reduce(function (a, b) {
-        return a.concat(b);
-      }),
+    () =>{
+      if(results){
+        return data?.pages.reduce(function (a, b) {
+          return a.concat(b)})
+      }
+      else{
+        const items = data?.pages.map((item) => {
+              return item.results;
+            });
+            const result = items?.reduce(function (a, b) {
+              return a.concat(b);
+            });
+            return result;
+      }
+    }
+      ,
     [data]
   );
   return status === "loading" ? (

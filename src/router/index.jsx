@@ -1,9 +1,12 @@
-import React, { Fragment } from "react";
+import React, { Fragment, createContext, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import CommonComponent from "../components/ui/CommonComponent";
 import Home from "../components/Home";
 import CategoriaPage from "../components/CategoriaPage"
 import PosterPage from "../components/PosterPage";
+import SearchPage from "../components/SearchPage";
+
+export const Quantity = createContext()
 export const categories = [
     {
       id: 1,
@@ -119,11 +122,12 @@ export const categories = [
   ];
 
 function Layout() {
+  const [showSearch, setShowSearch] = useState(false);
   return (
+    <Quantity.Provider value={[showSearch, setShowSearch]}>
     <Routes forceRefresh>
       <Route path="/" element={<CommonComponent/>}>
         <Route index element={<Home title={'Editorial'}/>} />
-        <Route path="/:photoId" element={<PosterPage/>} />
         <Route path='/Editorial' element={<Home title={'Editorial'}/>} />
         {categories.map((link) => (
           <Fragment key={link.id}>
@@ -133,8 +137,11 @@ function Layout() {
             />
           </Fragment>
         ))}
+           <Route path="/:photoId" element={<PosterPage/>} />
+           <Route path="/search" element={<SearchPage/>} />
       </Route>
     </Routes>
+    </Quantity.Provider>
   );
 }
 

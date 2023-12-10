@@ -2,10 +2,11 @@ import { useInfiniteQuery } from "@tanstack/react-query"
 import { fetchDataCategoria } from "../utils/fetchData.js"
 
 
-export const useGetDataCategoria =(queryValue)=>{
+export const useGetDataCategoria =(query)=>{
     return  useInfiniteQuery({
-        queryKey: ["search"],
-        queryFn: ()=>fetchDataCategoria(queryValue),
+        queryKey: [query],
+        queryFn:fetchDataCategoria,
+        queryHash:query,
         initialPageParam: 1,
         getNextPageParam: (_, pages) => pages.length + 1,
       });
