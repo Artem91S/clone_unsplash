@@ -1,5 +1,5 @@
 import "./App.css";
-import Layout from "./router";
+import {Layout} from "./router";
 
 
 function App() {

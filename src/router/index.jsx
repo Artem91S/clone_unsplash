@@ -8,7 +8,7 @@ import LinksPage from "../components/LinksPage";
 import CategoriaPage from "../components/CategoriaPage";
 
 export const Quantity = createContext()
-const categories = [
+export const categories = [
     {
       id: 1,
       path:'/Editorial',
@@ -122,7 +122,7 @@ const categories = [
     },
   ];
 
-function Layout() {
+export function Layout() {
   const [showSearch, setShowSearch] = useState('');
   return (
     <Quantity.Provider value={[showSearch, setShowSearch]}>
@@ -147,4 +147,3 @@ function Layout() {
   );
 }
 
-export default Layout;

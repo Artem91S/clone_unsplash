@@ -16,6 +16,7 @@ function LinksPage({ queryValue }) {
     });
     return result;
   }, [data]);
+  console.log(allItems);
   return (
     <>
       <Article title={queryValue} photo={allItems && allItems[20].urls?.regular} />
