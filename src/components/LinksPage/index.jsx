@@ -1,12 +1,12 @@
 import React, {  useMemo } from "react";
-import { useGetDataCategoria } from "../../hooks/useGetDataCategoria";
-import useDocumentTitle from "../../hooks/useDocumentTitle";
+import { useGetDataLink } from "../../hooks/useGetDataLink";
 import ListOfPhoto from '../Home/ListOfPhoto'
 import Article from '../ui/Article/Article'
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 
-function CategoriaPage({ queryValue }) {
+function LinksPage({ queryValue }) {
   useDocumentTitle(queryValue);
-  const { data} =useGetDataCategoria(queryValue) ;
+  const { data} =useGetDataLink(queryValue) ;
   const allItems = useMemo(() => {
     const res = data?.pages.map((item) => {
       return item.results;
@@ -16,13 +16,12 @@ function CategoriaPage({ queryValue }) {
     });
     return result;
   }, [data]);
-  // console.log(allItems);
   return (
     <>
       <Article title={queryValue} photo={allItems && allItems[20].urls?.regular} />
-      <ListOfPhoto  query={queryValue} results={'categoria'} />
+      <ListOfPhoto  query={queryValue} results={'links'} />
     </>
   );
 }
 
-export default CategoriaPage;
+export default LinksPage;

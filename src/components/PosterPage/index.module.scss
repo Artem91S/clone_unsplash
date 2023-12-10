@@ -2,7 +2,7 @@
     display: flex;
     width: 100%;
     flex-flow: column;
-    padding: 0px 10px;
+
 }
 .container {
     &__description{
@@ -75,10 +75,6 @@
             grid-template-columns:repeat(8,1fr) ;
           }
     }
-    .categories{
-        &__item{
-            font-size: 22px;
-           }
-    }
+  
    
 }

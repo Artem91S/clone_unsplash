@@ -1,11 +1,11 @@
 import { useInfiniteQuery } from "@tanstack/react-query"
-import { fetchDataCategoria } from "../utils/fetchData.js"
+import { fetchDataLink } from "../utils/fetchData.js"
 
 
-export const useGetDataCategoria =(query)=>{
+export const useGetDataLink =(query)=>{
     return  useInfiniteQuery({
         queryKey: [query],
-        queryFn:fetchDataCategoria,
+        queryFn:fetchDataLink,
         queryHash:query,
         initialPageParam: 1,
         getNextPageParam: (_, pages) => pages.length + 1,

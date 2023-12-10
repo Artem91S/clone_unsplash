@@ -3,7 +3,7 @@ import style from "./index.module.scss";
 import { FiChevronLeft } from "react-icons/fi";
 import { FiChevronRight } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
-export const categories = [
+ const categories = [
   {
     id: 1,
     title: "Editorial",

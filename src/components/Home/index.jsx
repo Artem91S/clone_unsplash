@@ -1,6 +1,6 @@
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 import Article from "../ui/Article/Article";
-import { useGetData } from "../../hooks/useGetData,";
+import { useGetData } from "../../hooks/useGetData"
 import { useMemo } from "react";
 import ListOfPhoto from './ListOfPhoto'
 

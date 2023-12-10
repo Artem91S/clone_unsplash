@@ -8,7 +8,7 @@
     &__title {
         color:#FFF;
         padding: 20px 0px;
-        font-size: 37px;
+        font-size: 20px;
         letter-spacing: 3px;
     }
     &__button {
@@ -16,11 +16,27 @@
         border-radius: 4px;
         cursor: pointer;
         padding: 10px;
-        font-size: 18px;
+        font-size: 12px;
         width: 200px;
     }
     &__button_title {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 800;
     }
+}
+
+@media (min-width:640px){
+    .section{
+        &__title{
+            font-size: 37px;
+        }
+        &__button{
+            width: 300px;
+            font-size: 18px;
+        }
+        &__button_title {
+            font-size: 20px;
+        }
+    }
+
 }

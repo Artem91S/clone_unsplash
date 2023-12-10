@@ -6,8 +6,8 @@ import { FaPlus } from "react-icons/fa6";
 import { HiMiniChevronDown } from "react-icons/hi2";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
-import { useGetDataCategoria } from "../../../hooks/useGetDataCategoria";
-import { useGetData } from "../../../hooks/useGetData,";
+import { useGetDataLink } from "../../../hooks/useGetDataLink";
+import { useGetData } from "../../../hooks/useGetData";
 import { useGetSearchData } from "../../../hooks/userGetSearchData";
 
 function ListOfPhoto({ results, query }) {
@@ -16,8 +16,8 @@ function ListOfPhoto({ results, query }) {
   const { data, error, fetchNextPage, hasNextPage, status } =
     results === "all"
       ? useGetData()
-      : results === "categoria"
-      ? useGetDataCategoria(query)
+      : results === "links"
+      ? useGetDataLink(query)
       : useGetSearchData(query);
 
   useEffect(() => {

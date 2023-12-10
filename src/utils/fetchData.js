@@ -9,7 +9,7 @@ export async function fetchData(props) {
   }
 
 
-  export async function fetchDataCategoria(props) {
+  export async function fetchDataLink(props) {
     const resp = await fetch(
       `https://api.unsplash.com/search/photos?client_id=Djh__xzu7c6vZ1HbNEgeye1iR65ud8gOTeVMB2tkS8c&query=${props.queryKey[0]}&per_page=30&page=${props.pageParam}`
     );

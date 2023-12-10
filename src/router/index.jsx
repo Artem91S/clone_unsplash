@@ -2,12 +2,12 @@ import React, { Fragment, createContext, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import CommonComponent from "../components/ui/CommonComponent";
 import Home from "../components/Home";
-import CategoriaPage from "../components/CategoriaPage"
 import PosterPage from "../components/PosterPage";
 import SearchPage from "../components/SearchPage";
+import LinksPage from "../components/LinksPage";
 
 export const Quantity = createContext()
-export const categories = [
+const categories = [
     {
       id: 1,
       path:'/Editorial',
@@ -133,7 +133,7 @@ function Layout() {
           <Fragment key={link.id}>
             <Route
               path={link.path}
-              element={<CategoriaPage queryValue={link.title} />}
+              element={<LinksPage queryValue={link.title} />}
             />
           </Fragment>
         ))}
