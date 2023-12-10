@@ -21,15 +21,15 @@ function Header() {
         <SearchField />
 
         <div className={style.navbar__links}>
-          <div >
-            <ul>
-              <li>Advertise</li>
-              <li>Blog</li>
-              <li>Unsplash+</li>
+        
+            <ul className={style.links__block}>
+              <Link className={style.links__block_item}>Advertise</Link>
+              <Link className={style.links__block_item}>Blog</Link>
+              <Link className={style.links__block_item}>Unsplash+</Link>
             </ul>
-          </div>
-          <div>
-            <button>Submit a photo</button>
+     
+          <div className={style.links__button}>
+            <div>Submit a photo</div>
           </div>
         </div>
 

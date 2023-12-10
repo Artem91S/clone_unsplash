@@ -47,3 +47,48 @@
     
   }
 }
+
+@media (min-width:640px) {
+  .icons {
+    &__bell{
+      display: block;
+    }
+  }
+}
+@media (min-width:768px) {
+  .navbar {
+    &__links {
+      display: flex;
+    }
+  }
+  .links {
+    &__block{
+      display: none;
+    }
+    &__button{
+      width: 100px;
+      cursor: pointer;
+      padding: 6px;
+      border:1px solid #eee;
+      color:#767676;
+    }
+  }
+}
+@media (min-width:992px){
+  
+  .links {
+    &__block{
+      display: flex;
+      gap:20px;
+      justify-content: center;
+      align-items: center;
+      width: 250px;
+    }
+    &__block_item{
+      cursor: pointer;
+      text-decoration: none;
+      color:#767676;
+    
+    }
+  }
+}

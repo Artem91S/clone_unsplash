@@ -25,8 +25,8 @@ function PosterPage() {
   }
   return (
     <div className={style.poster__container}>
-      <div className={style.container__image}>
-      <img src={allItems?.urls.regular} alt={allItems?.alt_description}  />
+      <div className={style.container__image} >
+      <img src={allItems?.urls.small} alt={allItems?.alt_description}  />
       </div>
       <div className={style.container__description}>
         <h3 className={style.description__title}>{allItems?.alt_description}</h3>

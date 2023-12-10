@@ -1,10 +1,11 @@
 .search__form {
     display: flex;
-    position: relative;
+
    
 }
 .form {
     &__input {
+        position: relative;
         color: rgb(117, 117, 117);
         padding-left: 40px;
         cursor: pointer;
@@ -23,8 +24,8 @@
     &__search {
         color:rgb(117, 117, 117);
         position: absolute;
-        top:20%;
-        left:2%;
+        top:25px;
+        left:65px;
         width: 26px;
         height: 26px;
     }
