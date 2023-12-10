@@ -5,6 +5,7 @@ import Home from "../components/Home";
 import PosterPage from "../components/PosterPage";
 import SearchPage from "../components/SearchPage";
 import LinksPage from "../components/LinksPage";
+import CategoriaPage from "../components/CategoriaPage";
 
 export const Quantity = createContext()
 const categories = [
@@ -138,6 +139,7 @@ function Layout() {
           </Fragment>
         ))}
            <Route path="/:photoId" element={<PosterPage/>} />
+           <Route path="/categoria/:categoria" element={<CategoriaPage/>} />
            <Route path="/search" element={<SearchPage/>} />
       </Route>
     </Routes>

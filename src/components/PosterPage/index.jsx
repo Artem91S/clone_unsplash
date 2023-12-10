@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useGetPhoto } from "../../hooks/useGetPhoto";
 import style from "./index.module.scss";
 import { FaHeart } from "react-icons/fa6";
@@ -46,7 +46,7 @@ function PosterPage() {
       className={style.container__categories}
       >
         {allItems?.tags.map((tag) => (
-          <p className={style.categories__item} key={tag.title}>{tag.title}</p>
+          <Link to={`/categoria/${tag.title}`} className={style.categories__item} key={tag.title}>{tag.title}</Link>
         ))}
       </div>
     </div>

@@ -29,3 +29,9 @@ export async function fetchData(props) {
       );
     return resp.json();
   }
+  export async function fetchSearchCategoria(props) {
+    const resp = await fetch(
+      `https://api.unsplash.com/search/collections?client_id=Djh__xzu7c6vZ1HbNEgeye1iR65ud8gOTeVMB2tkS8c&query=${props.queryKey[0]}&per_page=30&page=${props.pageParam}`
+      );
+    return resp.json();
+  }
