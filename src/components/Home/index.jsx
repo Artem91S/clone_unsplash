@@ -20,7 +20,7 @@ function Home({ title }) {
   return (
     <>
       <Article title={title} photo={allItems && allItems[7].urls?.regular} />
-      <ListOfPhoto getFunction={useGetData} results={true}/>
+      <ListOfPhoto  results={'all'}/>
     </>
   );
 }

@@ -122,7 +122,7 @@ export const categories = [
   ];
 
 function Layout() {
-  const [showSearch, setShowSearch] = useState(false);
+  const [showSearch, setShowSearch] = useState('');
   return (
     <Quantity.Provider value={[showSearch, setShowSearch]}>
     <Routes forceRefresh>

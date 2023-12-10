@@ -6,14 +6,17 @@ import { useNavigate } from "react-router-dom";
 
 function SearchField() {
   const [value, setValue] = useState("");
-  const [showSearch]=useContext(Quantity)
+  const [showSearch, setShowSearch]=useContext(Quantity)
   const navigate=useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // console.log(showSearch);
-    console.log(value);
-    navigate('./search')
+    // console.log(value);
+    setShowSearch(value)
+      navigate('./search')
+
+   
   };
 
   return (
@@ -26,10 +29,10 @@ function SearchField() {
           onChange={(e) => {
             setTimeout(() => {
               setValue(e.target.value);
-            }, 2000);
+            }, 100);
           }}
         />
-        <IoSearch   className={style.form__search} />
+        <IoSearch className={style.form__search} />
       </form>
     </div>
   );

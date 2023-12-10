@@ -1,8 +1,7 @@
-
-
 .poster{
     padding: 20px 4px;
     &__container {
+    position: relative;
     display: flex;
     flex-flow: column;
     gap:10px;
@@ -15,6 +14,7 @@
         align-items: center;
     }
     &__buttons {
+        width: 90%;
         display: flex;
         justify-content: space-between;
         padding: 0 10px;
@@ -75,4 +75,52 @@
         border-color: #111; 
     }
 }
+}
+
+@media(min-width:640px) {
+    .poster{
+        &__container {
+      
+        &:hover > .container__user_information{
+            visibility: visible;
+        }
+        &:hover > .container__buttons {
+            visibility: visible;
+        }
+      
+       
+    }
+    }
+    .container {
+        &__user_information {
+           visibility: hidden;
+           position: absolute;
+            color:#FFF;
+            top:20px;
+            left:10px;
+            z-index: 100;
+        }
+        &__image{
+            &:hover{
+                filter: blur(3px);
+            }
+        }
+        &__buttons {
+            visibility: hidden;
+            position: absolute;
+            bottom: 20px;
+        }
+    }
+    
+    
+    .buttons{
+        &__icons { 
+            
+            gap:20px;
+        }
+        &__download{
+           
+            
+        }
+    }
 }

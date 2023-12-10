@@ -20,7 +20,7 @@ function CategoriaPage({ queryValue }) {
   return (
     <>
       <Article title={queryValue} photo={allItems && allItems[20].urls?.regular} />
-      <ListOfPhoto getFunction={useGetDataCategoria} query={queryValue} results={false} />
+      <ListOfPhoto  query={queryValue} results={'categoria'} />
     </>
   );
 }
