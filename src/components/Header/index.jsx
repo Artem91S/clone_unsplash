@@ -1,11 +1,10 @@
-import React from "react";
-import MainIcon from "../../../assets/icons/MainIcon";
-import SearchField from "./SearchField/SearchField";
-import BellIcon from "../../../assets/icons/BellIcon";
+import MainIcon from "../../assets/icons/MainIcon";
+import SearchField from "./components/SearchField";
+import BellIcon from "../../assets/icons/BellIcon";
 import { FaUserCircle } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import style from "./index.module.scss";
-import LinkList from "./LinkList/LinkList";
+import LinkList from "./components/LinkList";
 import { Link } from "react-router-dom";
 
 

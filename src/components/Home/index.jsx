@@ -5,8 +5,7 @@ import { useMemo } from "react";
 import ListOfPhoto from './ListOfPhoto'
 
 function Home({ title }) {
-   const {data} = useGetData();
- 
+  const {data} = useGetData();
   useDocumentTitle(title);
 
   const allItems = useMemo(

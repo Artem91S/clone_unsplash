@@ -12,7 +12,7 @@ import { useGetSearchData } from "../../../hooks/userGetSearchData";
 
 function ListOfPhoto({ results, query }) {
   const { ref, inView } = useInView();
-
+  const [switchColumns,setSwitchColumns]=useState(false)
   const { data, error, fetchNextPage, hasNextPage, status } =
     results === "all"
       ? useGetData()
@@ -46,12 +46,14 @@ function ListOfPhoto({ results, query }) {
   ) : status === "error" ? (
     <p>Error: {error.message}</p>
   ) : (
+
     <div className={style.poster}>
+      <button className={style.switch_btn} onClick={()=>setSwitchColumns(!switchColumns)}>Switch columns</button>
       <MasonryContainer
         columnsCountBreakPoints={{
           350: 1,
           640: 2,
-          700: 3,
+          768: switchColumns ? 5 : 3,
         }}
         gutter="24px"
         style={{
@@ -65,7 +67,6 @@ function ListOfPhoto({ results, query }) {
           <div className={style.poster__container}>
             <div className={style.container__user_information}>
               <img
-               
                 src={photo.urls?.thumb}
                 alt={photo.user.name}
                 style={{ width: "28px", height: "28px", borderRadius: "50%" }}

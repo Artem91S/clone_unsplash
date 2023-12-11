@@ -75,8 +75,11 @@
         border-color: #111; 
     }
 }
-}
 
+}
+.switch_btn{
+    display: none;
+}
 @media(min-width:640px) {
     .poster{
         &__container {
@@ -110,9 +113,7 @@
             position: absolute;
             bottom: 20px;
         }
-    }
-    
-    
+    }    
     .buttons{
         &__icons { 
             
@@ -122,5 +123,16 @@
            
             
         }
+    }
+}
+@media(min-width:768px){
+    .switch_btn{
+        display: block;
+        background: transparent;
+        color:#767676;
+        padding: 4px;
+        cursor: pointer;
+        border:2px solid #d1d1d1;
+        margin-bottom: 12px;
     }
 }

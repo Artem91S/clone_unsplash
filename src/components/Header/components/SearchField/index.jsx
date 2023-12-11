@@ -6,17 +6,13 @@ import { useNavigate } from "react-router-dom";
 
 function SearchField() {
   const [value, setValue] = useState("");
-  const [showSearch, setShowSearch]=useContext(Quantity)
+  const [showSearch,setShowSearch]=useContext(Quantity)
   const navigate=useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(showSearch);
-    // console.log(value);
     setShowSearch(value)
       navigate('./search')
-
-   
   };
 
   return (
